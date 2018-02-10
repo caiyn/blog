@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx.xsd"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans">
+	
+	<context:property-placeholder location="classpath:drm.properties" />
+	<context:component-scan base-package="com.test" />
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+	
+	<import resource="WEB-INF/datasource.xml"/>
+	<import resource="WEB-INF/conf/test/test.xml"/>
+	<import resource="WEB-INF/conf/blog/blogContext.xml"/>
+	<import resource="WEB-INF/conf/user/userContext.xm"/>
+	
+</beans>
