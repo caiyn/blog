@@ -7,7 +7,6 @@ public class Test extends ActionSupport{
 
 	public String test(){
 		System.out.println("ok");
-		System.out.println("ok2");
 		return SUCCESS;
 	}
 }
